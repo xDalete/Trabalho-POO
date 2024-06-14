@@ -1,19 +1,3 @@
-let salvar = document.getElementById("sv");
-
-salvar.addEventListener('mouseenter', entrar);
-salvar.addEventListener('mouseleave', sair);
-salvar.addEventListener('click', clicar);
-
-function entrar() {
-    salvar.style.backgroundColor = "black";
-    salvar.style.color = "white";
-}
-
-function sair() {
-    salvar.style.backgroundColor = "#5196e9";
-    salvar.style.color = "black";
-}
-
 let senhaInput = document.getElementById("sen");
 senhaInput.addEventListener('keydown', function (event) {
     if (event.key === "Enter") {
@@ -21,7 +5,7 @@ senhaInput.addEventListener('keydown', function (event) {
     }
 });
 
-function clicar() {
+function salvar() {
     let usuario = document.getElementById("log").value.toLowerCase();
     let senha = document.getElementById("sen").value;
 
@@ -32,7 +16,7 @@ function clicar() {
     let senha2 = "1234";
 
     if ((usuario === usuario1 && senha === senha1) || (usuario === usuario2 && senha === senha2)) {
-        window.location.href = "paginainicial.html";
+        window.location.href = "./../";
     } else {
         alert("Usuário não identificado");
     }
