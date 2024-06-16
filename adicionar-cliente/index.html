@@ -8,9 +8,40 @@
     <link rel="stylesheet" href="./styles.css">
     <script defer src="./script.js"></script>
 </head>
-
 <body>
-
+    <div class="login-card-container">
+        <div class="login-card">
+            <div class="login-card-logo">
+                <img src="logo.png" alt="logo">
+            </div>
+            <div class="login-card-header">
+                <h1 id="titulo">Adicionar Cliente</h1>
+            </div>
+            <form class="login-card-form">  
+                <div class="form-item">
+                    <label for="nome">Nome:</label>
+                    <input type="text" name="nome" id="nome" required>
+                </div>
+                <div class="form-item">
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="email" required>
+                </div>
+                <div class="form-item">
+                    <label for="telefone">Telefone:</label>
+                    <input type="text" name="telefone" id="telefone" required>
+                </div>
+                <div class="form-item">
+                    <label for="cpf-cnpj">CPF/CNPJ:</label>
+                    <input type="text" name="cpf-cnpj" id="cpf-cnpj" required>
+                </div>
+                <div class="form-item">
+                    <label for="nome-fantasia">Nome Fantasia:</label>
+                    <input type="text" name="nome-fantasia" id="nome-fantasia" required>
+                </div>
+                <button type="submit" class="botao">Cadastrar</button>
+            </form>
+        </div>
+    </div>
 </body>
 
 </html>

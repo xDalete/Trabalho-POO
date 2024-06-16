@@ -4,24 +4,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pagina de Login</title>
+    <title>Página de Login</title>
     <link rel="stylesheet" href="./styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
-    <div class="centralizar">
-        <div class="card">
-            <h2 id="titulo">P Á G I N A<br>L O G I N</h2>
-            <div class="usSen"> Usuário: <input type="text" id="log" class="bordaIn"></div>
-            <div class="usSen"> Senha: <input type="password" id="sen" class="bordaIn"></div>
-            <button class="botao" id="salvar" onclick="salvar()">Salvar</button>
+    <div class="login-card-container">
+        <div class="login-card">
+            <div class="login-card-logo">
+                <img src="logo.png" alt="logo">
+            </div>
+
+            <div class="login-card-header">
+                <h1 id="titulo">Login</h1>
+                <div>Please login to use platform</div>
+            </div>
+
+            <form class="login-card-form">
+                <div class="form-item">
+                    <i class="material-icons">person</i>
+                    <input type="text" id="log" placeholder="Enter username" required autofocus>
+                </div>
+
+                <div class="form-item">
+                    <i class="material-icons">lock</i>
+                    <input type="password" id="sen" placeholder="Enter password" required>
+                </div>
+
+                <div class="form-item-other">
+                    <div class="checkbox">
+                        <input type="checkbox" id="rememberMeCheckbox">
+                        <label for="rememberMeCheckbox">Remember me</label>
+                    </div>
+                    <a href="#">Esqueci minha senha!!</a>
+                </div>
+                <button type="button" onclick="salvar()">Sign in</button>
+            </form>
         </div>
     </div>
 
-
-    <script src="./script.js">
-
-    </script>
+    <script src="./script.js"></script>
 </body>
 
 </html>
