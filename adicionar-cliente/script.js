@@ -1,48 +1,22 @@
-class Clientes {
-    constructor(nome, email, telefone) {
-        this.nome = nome;
-        this.email = email;
-        this.telefone = telefone;
+import Cliente from "../lib/Cliente.js";
+import DB from "../lib/Database.js";
 
-    }
+const nomeInput = document.getElementById('nome')
+const nomeFantasiaInput = document.getElementById('nome-fantasia')
+const emailInput = document.getElementById('email')
+const telefoneInput = document.getElementById('telefone')
+const cpfInput = document.getElementById('cpf_cnpj')
+const formCliente = document.getElementById('form-cliente');
 
-    getNome() {
-        return this.nome;
-    }
+formCliente.onsubmit = (event) => {
+    event.preventDefault()
 
-    setNome(Novonome) {
-        this.nome = Novonome
-    }
-
-    getEmail() {
-        return this.email;
-    }
-
-    setEmail(Novoemail) {
-        this.email = Novoemail
-    }
-
-    getTelefone() {
-        return this.telefone;
-    }
-
-    setTelefone(Novotelefone) {
-        this.telefone = Novotelefone
-    }
-
-    cliente() {
-        return {
-            nome: this.nome,
-            email: this.email,
-            telefone: this.telefone
-        };
-    }
-
-    mostrarDados() {
-        console.log(this.cliente());
-    }
+    const cliente = new Cliente(-1, nomeInput.value, nomeFantasiaInput.value, emailInput.value, telefoneInput.value, cpfInput.value)
+    DB.cliente.add(cliente)
+    console.log(DB.cliente.get())
+    nomeInput.value = "";
+    nomeFantasiaInput.value = "";
+    emailInput.value = "";
+    telefoneInput.value = "";
+    cpfInput.value = "";
 }
-
-let cliente1 = new Clientes("Cleisson", "clp@gmail.com", "(33) 00000-0000");
-let cliente2 = new Clientes("Pedro", "plp@gmail.com", "(33) 00000-0000");
-let cliente3 = new Clientes("Lucas","ls@gmail.com","(33) 00000-0000")

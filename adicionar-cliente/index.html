@@ -5,22 +5,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adicionar Cliente</title>
-    <link rel="stylesheet" href="./styles.css">
-    <script defer src="./script.js"></script>
+    <link rel="stylesheet" href="./../styles/global.css">
+    <script defer type="module" src="./script.js"></script>
 </head>
+
 <body>
-    <div class="login-card-container">
-        <div class="login-card">
-            <div class="login-card-logo">
-                <img src="logo.png" alt="logo">
+    <div class="card-container">
+        <div class="card">
+            <div class="card-logo">
+                <img src="./../images/logo.png" alt="logo">
             </div>
-            <div class="login-card-header">
+            <div class="card-header">
                 <h1 id="titulo">Adicionar Cliente</h1>
             </div>
-            <form class="login-card-form">  
+            <form class="card-form" id="form-cliente">
                 <div class="form-item">
                     <label for="nome">Nome:</label>
                     <input type="text" name="nome" id="nome" required>
+                </div>
+                <div class="form-item">
+                    <label for="nome-fantasia">Nome Fantasia:</label>
+                    <input type="text" name="nome-fantasia" id="nome-fantasia" required>
                 </div>
                 <div class="form-item">
                     <label for="email">Email:</label>
@@ -31,12 +36,8 @@
                     <input type="text" name="telefone" id="telefone" required>
                 </div>
                 <div class="form-item">
-                    <label for="cpf-cnpj">CPF/CNPJ:</label>
-                    <input type="text" name="cpf-cnpj" id="cpf-cnpj" required>
-                </div>
-                <div class="form-item">
-                    <label for="nome-fantasia">Nome Fantasia:</label>
-                    <input type="text" name="nome-fantasia" id="nome-fantasia" required>
+                    <label for="cpf_cnpj">CPF/CNPJ:</label>
+                    <input type="text" name="cpf_cnpj" id="cpf_cnpj" required>
                 </div>
                 <button type="submit" class="botao">Cadastrar</button>
             </form>
