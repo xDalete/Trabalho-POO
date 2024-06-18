@@ -5,32 +5,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Criar Orçamento</title>
-    <link rel="stylesheet" href="./styles.css">
-     <script defer src="./script.js"></script>
+    <link rel="stylesheet" href="./../styles/global.css">
+    <script defer type="module" src="./script.js"></script>
 </head>
+
 <body>
-    <div class="login-card-container">
-        <div class="login-card">
-            <div class="login-card-logo">
-                <img src="logo.png" alt="logo">
+    <div class="card-container">
+        <div class="card">
+            <div class="card-logo">
+                <img src="./../images/logo.png" alt="logo">
             </div>
-            <div class="login-card-header">
+            <div class="card-header">
                 <h1 id="titulo">Cadastro de Orçamento</h1>
             </div>
-            <form class="login-card-form" id="cadastroForm">
+            <form class="card-form" id="cadastroForm">
                 <div class="form-item">
                     <label for="cliente">Selecione o Cliente</label>
-                    <select id="cliente" required>
-                        <option value="">Selecione um cliente</option>
-                        <option value="cliente1">Cliente 1</option>
-                        <option value="cliente2">Cliente 2</option>
-                        <option value="cliente3">Cliente 3</option>
-                    </select>
+                    <select id="cliente" required></select>
                 </div>
-                <button type="button" onclick="mostrarCamposProduto()">Confirmar Cliente</button>
-                
-                <div id="produtoCampos" style="display: none;">
-                    <div class="form-item">
+                <div id="produtoCampos">
+                    <div class=" form-item">
                         <label for="produto">Nome do Produto</label>
                         <input type="text" id="produto" placeholder="Digite o nome do produto" required>
                     </div>
@@ -46,7 +40,7 @@
                         <label for="quantidade">Quantidade Desejada</label>
                         <input type="number" id="quantidade" placeholder="Digite a quantidade desejada" required>
                     </div>
-                    <button type="submit">Finalizar Orçamento</button>
+                    <button type="submit">Adicionar Produto</button>
                 </div>
             </form>
         </div>

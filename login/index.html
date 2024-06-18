@@ -1,50 +1,47 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página de Login</title>
-    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./../styles/global.css">
+    <script src="./script.js"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
-    <div class="login-card-container">
-        <div class="login-card">
-            <div class="login-card-logo">
-                <img src="logo.png" alt="logo">
-            </div>
-
-            <div class="login-card-header">
-                <h1 id="titulo">Login</h1>
-                <div>Please login to use platform</div>
-            </div>
-
-            <form class="login-card-form">
-                <div class="form-item">
-                    <i class="material-icons">person</i>
-                    <input type="text" id="log" placeholder="Enter username" required autofocus>
-                </div>
-
-                <div class="form-item">
-                    <i class="material-icons">lock</i>
-                    <input type="password" id="sen" placeholder="Enter password" required>
-                </div>
-
-                <div class="form-item-other">
-                    <div class="checkbox">
-                        <input type="checkbox" id="rememberMeCheckbox">
-                        <label for="rememberMeCheckbox">Remember me</label>
-                    </div>
-                    <a href="#">Esqueci minha senha!!</a>
-                </div>
-                <button type="button" onclick="salvar()">Sign in</button>
-            </form>
+    <div class="card">
+        <div class="card-logo">
+            <img src="./../images/logo.png" alt="logo">
         </div>
-    </div>
 
-    <script src="./script.js"></script>
+        <div class="card-header">
+            <h1 id="titulo">Login</h1>
+            <div>Please login to use the platform</div>
+        </div>
+
+        <form class="card-form">
+            <div class="form-item">
+                <i class="material-icons">person</i>
+                <input type="text" id="log" placeholder="Enter username" required autofocus>
+            </div>
+
+            <div class="form-item">
+                <i class="material-icons">lock</i>
+                <input type="password" id="sen" placeholder="Enter password" required>
+            </div>
+
+            <div class="form-item-other">
+                <div class="checkbox">
+                    <input type="checkbox" id="rememberMeCheckbox">
+                    <label for="rememberMeCheckbox">Remember me</label>
+                </div>
+                <a href="#">Esqueci minha senha!!</a>
+            </div>
+            <button type="button" onclick="salvar()">Sign in</button>
+        </form>
+    </div>
 </body>
 
 </html>
